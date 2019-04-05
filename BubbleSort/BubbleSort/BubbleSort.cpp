@@ -32,15 +32,15 @@ void Wypisz(int* p, int n)
 
 int Sortuj(int* p, int n, int d = 1)
 {
-	int ile = 0;
-	int z;
-	for (int j = 0; j < n - 1; j++)
+	int ile = 0, z, j=0;
+	
+	do
 	{
 		z = 0;
 		for (int i = 0; i < n - 1 - j; i++)
 		{
 			ile++;
-			if (p[i] > p[i + 1])
+			if (d*p[i] > d*p[i + 1])
 			{
 				int x = p[i];
 				p[i] = p[i + 1];
@@ -48,21 +48,21 @@ int Sortuj(int* p, int n, int d = 1)
 				z = 1;
 			}
 		}
-		if (!z) break;
-	}
+		j++;
+
+	} while (z);
+
 	return ile;
 }
 
 int main()
 {
-	//int n = Pobierz();
-	int n = 10;
-	//int *p = new int[n];
-	int p[] = { 10,9,8,7,6,5,4,3,2,1 };
+	int n = Pobierz();
+	int *p = new int[n];
 	srand(time(NULL));
 
-	/*for(int i=0;i<n;i++)
-		p[i] = rand()%100;*/
+	for(int i=0;i<n;i++)
+		p[i] = rand()%100;
 
 	Wypisz(p, n);
 
