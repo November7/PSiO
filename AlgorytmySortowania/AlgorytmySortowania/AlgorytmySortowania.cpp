@@ -30,7 +30,7 @@ void Wypisz(int* p, int n)
 	cout << endl;
 }
 
-int Sortuj(int* p, int n, int d = 1)
+int Bubble(int* p, int n, int d = 1)
 {
 	int ile = 0, z, j=0;
 	
@@ -66,7 +66,7 @@ int main()
 
 	Wypisz(p, n);
 
-	int i = Sortuj(p, n);
+	int i = Bubble(p, n);
 
 	Wypisz(p, n);
 
