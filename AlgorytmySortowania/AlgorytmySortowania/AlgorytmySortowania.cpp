@@ -8,6 +8,26 @@
 
 using namespace std;
 
+int Pobierz();
+void Wypisz(int*, int);
+int Bubble(int*, int, int = 1);
+
+int main()
+{
+	int n = Pobierz();
+	int *p = new int[n];
+	srand(time(NULL));
+
+	for(int i=0;i<n;i++)
+		p[i] = rand()%100;
+
+	Wypisz(p, n);
+	int i = Bubble(p, n);
+	Wypisz(p, n);
+	cout << "Posortowano po " << i << " iteracjach" << endl;
+	return 0;
+}
+
 int Pobierz()
 {
 	int n;
@@ -30,10 +50,10 @@ void Wypisz(int* p, int n)
 	cout << endl;
 }
 
-int Bubble(int* p, int n, int d = 1)
+int Bubble(int* p, int n, int d)
 {
-	int ile = 0, z, j=0;
-	
+	int ile = 0, z, j = 0;
+
 	do
 	{
 		z = 0;
@@ -53,24 +73,4 @@ int Bubble(int* p, int n, int d = 1)
 	} while (z);
 
 	return ile;
-}
-
-int main()
-{
-	int n = Pobierz();
-	int *p = new int[n];
-	srand(time(NULL));
-
-	for(int i=0;i<n;i++)
-		p[i] = rand()%100;
-
-	Wypisz(p, n);
-
-	int i = Bubble(p, n);
-
-	Wypisz(p, n);
-
-	cout << "Posortowano po " << i << " iteracjach" << endl;
-
-	return 0;
 }
