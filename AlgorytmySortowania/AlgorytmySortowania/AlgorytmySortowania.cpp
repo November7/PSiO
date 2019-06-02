@@ -11,6 +11,7 @@ int Bubble(int*, int, int = 1);
 
 int main()
 {
+	
 	int n = Pobierz();
 	int *p = new int[n];
 	srand(time(NULL));
@@ -22,6 +23,11 @@ int main()
 	int i = Bubble(p, n);
 	Wypisz(p, n);
 	cout << "Posortowano po " << i << " iteracjach" << endl;
+
+
+
+
+
 	return 0;
 }
 
