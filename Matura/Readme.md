@@ -13,7 +13,7 @@ Dane: n   – liczba całkowita większa od 1 <br>
 A[1..n]  – tablica zawierająca ciąg n liczb zapisanych przez dzieci (najpierw wszystkie liczby nieparzyste, a potem wszystkie liczby parzyste)  <br>
 Wynik: w – pierwsza od lewej parzysta liczba w tablicy A <br>
 <br>
-<string>Przykład:</string> <br>
+<strong>Przykład:</strong> <br>
 Dane: n = 10 <br>
 A[1..n] =	5,99,3,7,111,13,4,24,4,8 <br>
 Wynik: w  = 4 <br>
