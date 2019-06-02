@@ -7,6 +7,4 @@ Zajęcia dodatkowe z programowania. Język C/C++ (projekty Visual Studio Communi
 1.4 Sortowanie szybkie<br>
 
 # Matura z informatyki
-## 2019
-
 
