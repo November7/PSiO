@@ -17,3 +17,4 @@ Wynik: w – pierwsza od lewej parzysta liczba w tablicy A <br>
 Dane: n = 10 <br>
 A[1..n] =	5,99,3,7,111,13,4,24,4,8 <br>
 Wynik: w  = 4 <br>
+### Rozwiązania:
