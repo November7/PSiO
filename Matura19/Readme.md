@@ -35,3 +35,11 @@ Funkcja isPot3(n) sprawdza czy dana liczba <strong>n</strong> jest potęgą licz
 Podaj, w kolejności ich występowania w pliku liczby.txt, wszystkie liczby, które są równe sumie silni swoich cyfr. 
 ## Rozwiązanie (Zadanie42.h)
 Funkcja isSum(n) sprawdza czy liczba jest równa sumie silni swoich cyfr i jeżeli tak zwraca true, w przeciwnym wypadku false.
+
+## Zadanie 4.3
+W pliku liczby.txt znajdź najdłuższy ciąg liczb występujących kolejno po sobie i taki, że największy wspólny dzielnik ich wszystkich jest większy od 1 (innymi słowy: istnieje taka liczba całkowita większa od 1, która jest dzielnikiem każdej z tych liczb).  Jako odpowiedź podaj wartość pierwszej liczby w takim ciągu, długość ciągu oraz największą liczbę całkowitą, która jest dzielnikiem każdej liczby w tym ciągu. W pliku z danymi jest tylko jeden taki ciąg o największej długości. 
+ 
+Uwaga: Możesz skorzystać z zależności NWD(a, b, c) = NWD(NWD(a, b), c). 
+
+## Rozwiązanie (Zadanie43.h)
+Funkcja findNWD(int t[], int n) wypisuje początek najdłużego zbioru, jego długość i NWD (pod warunkiem, że jest większe od 1)
