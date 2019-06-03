@@ -30,3 +30,8 @@ Uwaga: Plik przyklad.txt zawiera przykładowe dane spełniające warunki zadania
 Podaj, ile z podanych liczb jest potęgami liczby 3 (czyli liczbami postaci 1 = 30, 3 = 31, 9 = 32 itd.).
 ## Rozwiązanie (Zadanie41.h):
 Funkcja isPot3(n) sprawdza czy dana liczba <strong>n</strong> jest potęgą liczby 3 i jeżeli tak zwraca true, w przeciwnym wypadku false.
+
+## Zadanie 4.2
+Podaj, w kolejności ich występowania w pliku liczby.txt, wszystkie liczby, które są równe sumie silni swoich cyfr. 
+## Rozwiązanie (Zadanie42.h)
+Funkcja isSum(n) sprawdza czy liczba jest równa sumie silni swoich cyfr i jeżeli tak zwraca true, w przeciwnym wypadku false.
