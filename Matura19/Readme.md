@@ -42,4 +42,4 @@ W pliku liczby.txt znajdź najdłuższy ciąg liczb występujących kolejno po s
 Uwaga: Możesz skorzystać z zależności NWD(a, b, c) = NWD(NWD(a, b), c). 
 
 ## Rozwiązanie (Zadanie43.h)
-Funkcja findNWD(int t[], int n) wypisuje początek najdłużego zbioru, jego długość i NWD (pod warunkiem, że jest większe od 1)
+Funkcja findNWD(int t[], int n) wypisuje początek najdłużego zbioru, jego długość i NWD (pod warunkiem, że jest większe od 1) w tablicy t o rozmiarze n.
