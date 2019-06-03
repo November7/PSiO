@@ -79,36 +79,8 @@ int main()
 	{
 		liczby >> t[i++];
 	}
-	int n;
-	int max = 0;
-	int maxi = i;
-	int maxnwd;
-	int maxnwd2;
-	for (int i = 0; i < 499; i++)
-	{
-		n = nwd(t[i], t[i + 1]);
-		if (n > 1)
-		{
-			maxnwd = n;
-			for (int j = 2; i + j < 500; j++)
-			{
-				n = nwd(n, t[i + j]);
-				if (n > 1) maxnwd = n;
-				if (n == 1)
-				{
-					if (j > max)
-					{
-						max = j;
-						maxi = i;
-						maxnwd2 = maxnwd;
-					}
-					break;
-				}
-			}
-		}
-	}
-
-	cout << maxi << " " << max << " "<<maxnwd2<<endl;
+	
+	findNWD(t, 500);
 	
 #endif
 }

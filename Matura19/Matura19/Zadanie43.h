@@ -1,6 +1,6 @@
 #pragma once
 
-int nwd(int a, int b)
+int NWD(int a, int b)
 {
 	int p;
 
@@ -13,8 +13,35 @@ int nwd(int a, int b)
 
 	return a;
 }
-
-int nwd(int a, int b, int c)
+void findNWD(int t[], int n)
 {
-	return nwd(nwd(a, b), c);
+	int length = 0;
+	int start = 0;
+	int c_nwd;
+	int f_nwd;
+	for (int i = 0 ; i < n-1 ; i++)
+	{
+		int nwd = NWD(t[i], t[i + 1]);
+		if (nwd > 1)
+		{
+			c_nwd = nwd;
+			for (int j = 2; i + j < 500; j++)
+			{
+				nwd = NWD(nwd, t[i + j]);
+				if (nwd > 1) c_nwd = nwd;
+				if (nwd == 1)
+				{
+					if (j > length)
+					{
+						length = j;
+						start = i;
+						f_nwd = c_nwd;
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	cout << start << " " << length << " " << f_nwd << endl;
 }
