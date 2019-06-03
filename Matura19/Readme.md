@@ -29,4 +29,4 @@ Uwaga: Plik przyklad.txt zawiera przykładowe dane spełniające warunki zadania
 ## Zadanie 4.1
 Podaj, ile z podanych liczb jest potęgami liczby 3 (czyli liczbami postaci 1 = 30, 3 = 31, 9 = 32 itd.).
 ## Rozwiązanie (Zadanie41.h):
-Funkcja Pot3() sprawdza czy dana liczba jest potęgą 3 i jeżeli tak zwraca true, w przeciwnym wypadku false.
+Funkcja isPot3(n) sprawdza czy dana liczba <strong>n</strong> jest potęgą liczby 3 i jeżeli tak zwraca true, w przeciwnym wypadku false.
