@@ -2,98 +2,113 @@
 //
 
 #include "pch.h"
+
 #include <iostream>
+#include <fstream>
+
+#include "Zadanie1.h"
+#include "Zadanie41.h"
+#include "Zadanie42.h"
+#include "Zadanie43.h"
+
+#define Zadanie43
 
 using namespace std;
 
-// Deklaracje funkcji:
-
-int S1(int[], int);
-int S2(int[], int);
-int S3(int[], int, int);
-
-
 int main()
 {
+
+#ifdef Zadanie1
+	
 	int n = 10;
 	int A[] = { 3,3,5,9,2,4,8,2,10,12 };
 	cout << "Zadanie 1.1" << endl;
 	cout << "V1 O(n) = log n: " << S1(A, n) << endl;
 	cout << "V2 O(n) = log n: " << S2(A, n) << endl;
 	cout << "V3 O(n) = log n: " << S3(A, 0, n-1) << " - rekurencja"<< endl;
-}
 
 
-/* Wersja 1 
+#elif defined Zadanie2
 
-	- Złożoność obliczeniowa liniowa: O(n) = n 
-	- Wersja iteracyjna
-	- Użycie: S1(tablica, rozmiar);
+	cout << "2" << endl;
 
-*/
+#elif defined Zadanie41
 
-int S1(int A[], int n)
-{
-	for (int i = 1; i < n; i++)  // pierwsza liczba zawsze jest nieparzysta
+	cout << "Zadanie 4.1." << endl;
+	ifstream liczby;
+
+	liczby.open("../Dane_PR2/liczby.txt", std::ifstream::in);
+	int x;
+	int ile = 0;
+	while (liczby.good())
 	{
-		if (A[i] % 2 == 0) return A[i];
+		liczby >> x;
+		if (isPot3(x))
+		{
+			cout << x << ", ";
+			ile++;
+		}
 	}
-	return 0; //sytuacja niemożliwa - wyklucza ją treść zadania!
-}
 
-/* Wersja 2 
+	cout << endl << "Odpowiedz: " << ile << " liczb jest potega 3" << endl;
+	   
+#elif defined Zadanie42
+
+	cout << "Zadanie 4.2." << endl;
+	ifstream liczby;
+
+	liczby.open("../Dane_PR2/liczby.txt", std::ifstream::in);
+	int x;
+
+	while (liczby.good())
+	{
+		liczby >> x;
+		if (isSum(x)) cout << x << endl;
+		
+	}
+
+#elif defined Zadanie43
+
+	cout << "Zadanie 4.3." << endl;
+	ifstream liczby;
+
+	liczby.open("../Dane_PR2/liczby.txt", std::ifstream::in);
+	int t[500];
+	int i = 0;
+	while (liczby.good())
+	{
+		liczby >> t[i++];
+	}
+	int n;
+	int max = 0;
+	int maxi = i;
+	int maxnwd;
+	int maxnwd2;
+	for (int i = 0; i < 499; i++)
+	{
+		n = nwd(t[i], t[i + 1]);
+		if (n > 1)
+		{
+			maxnwd = n;
+			for (int j = 2; i + j < 500; j++)
+			{
+				n = nwd(n, t[i + j]);
+				if (n > 1) maxnwd = n;
+				if (n == 1)
+				{
+					if (j > max)
+					{
+						max = j;
+						maxi = i;
+						maxnwd2 = maxnwd;
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	cout << maxi << " " << max << " "<<maxnwd2<<endl;
 	
-	- Złożoność logarytmiczna: O(n) = log n,
-	- Wersja iteracyjna
-	- Użycie: S2(tablica, rozmiar);
-
-*/
-
-int S2(int A[], int n)
-{
-	int p = 0;
-	int k = n - 1;
-	while (p < k)
-	{
-		int s = (p + k) / 2;
-		if (A[s] % 2 == 0)
-		{
-			k = s;
-		}
-		else p = s + 1;
-	}
-
-	return A[p];
-}
-
-/* Wersja 3
-
-	- Złożoność logarytmiczna: O(n) = log n,
-	- Wersja rekurencyjna
-	- Użycie: S3(tablica, początek_zbioru, koniec_zbioru);
-
-*/
-int S3(int A[], int p, int k)
-{
-
-	if (p == k - 1)
-	{
-		if (A[p] % 2 == 0) return A[p];
-		else return A[k];
-	}
-	else if (p == k) return A[p];
-	else
-	{
-		int s = (p + k) / 2;
-
-
-		if (A[s] % 2 == 0)
-		{
-			S3(A, p, s);
-		}
-		else
-		{
-			S3(A, s, k);
-		}
-	}
+#endif
 }

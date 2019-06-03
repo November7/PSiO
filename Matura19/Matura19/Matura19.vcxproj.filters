@@ -18,6 +18,18 @@
     <ClInclude Include="pch.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Zadanie1.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Zadanie41.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Zadanie42.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Zadanie43.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -26,5 +38,25 @@
     <ClCompile Include="Matura19.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Dane_PR2\liczby.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="..\Dane_PR2\marki.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="..\Dane_PR2\perfumy.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="..\Dane_PR2\pogoda.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="..\Dane_PR2\przyklad.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="..\Dane_PR2\sklad.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
   </ItemGroup>
 </Project>

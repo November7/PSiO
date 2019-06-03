@@ -151,7 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Zadanie41.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Zadanie1.h" />
+    <ClInclude Include="Zadanie42.h" />
+    <ClInclude Include="Zadanie43.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Matura19.cpp" />
@@ -161,6 +165,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Dane_PR2\liczby.txt" />
+    <Text Include="..\Dane_PR2\marki.txt" />
+    <Text Include="..\Dane_PR2\perfumy.txt" />
+    <Text Include="..\Dane_PR2\pogoda.txt" />
+    <Text Include="..\Dane_PR2\przyklad.txt" />
+    <Text Include="..\Dane_PR2\sklad.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
