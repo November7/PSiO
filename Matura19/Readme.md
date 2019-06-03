@@ -17,3 +17,21 @@ Wynik: w – pierwsza od lewej parzysta liczba w tablicy A <br>
 Dane: n = 10 <br>
 A[1..n] =	5,99,3,7,111,13,4,24,4,8 <br>
 Wynik: w  = 4 <br>
+## Rozwiązania (Zadanie1.h):
+1. S1 - Wersja iteracyjna o złożoności liniowej O(n) = n
+2. S2 - Wersja iteracyjna o złożoności logarytmicznej O(n) = log n
+2. S3 - Wersja rekurencyjna o złożoności logarytmicznej O(n) = log n
+
+## Zadanie 4.
+W pliku liczby.txt zapisano 500 liczb całkowitych dodatnich po jednej w każdym wierszu. Każda liczba jest z zakresu od 1 do 100 000. Napisz program(-y) dający(-e) odpowiedzi do poniższych zadań. Zapisz uzyskane odpowiedzi w pliku wyniki4.txt, poprzedzając każdą z nich numerem odpowiedniego zadania. 
+ 
+Uwaga: Plik przyklad.txt zawiera przykładowe dane spełniające warunki zadania.  Odpowiedzi dla danych z tego pliku są podane pod treściami zadań. 
+## Zadanie 4.1
+Podaj, ile z podanych liczb jest potęgami liczby 3 (czyli liczbami postaci 1 = 30, 3 = 31, 9 = 32 itd.).
+## Rozwiązanie (Zadanie41.h):
+Funkcja isPot3(n) sprawdza czy dana liczba <strong>n</strong> jest potęgą liczby 3 i jeżeli tak zwraca true, w przeciwnym wypadku false.
+
+## Zadanie 4.2
+Podaj, w kolejności ich występowania w pliku liczby.txt, wszystkie liczby, które są równe sumie silni swoich cyfr. 
+## Rozwiązanie (Zadanie42.h)
+Funkcja isSum(n) sprawdza czy liczba jest równa sumie silni swoich cyfr i jeżeli tak zwraca true, w przeciwnym wypadku false.
